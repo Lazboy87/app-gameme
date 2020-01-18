@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 
-class MainActivity : AppCompatActivity() {
+class Login : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             println(password)
 
             if(username  == "lasse@lasse.com" && password == "lasse87") {
-                val intent = Intent(this, Main2Activity::class.java)
+                val intent = Intent(this, Userpage::class.java)
                 startActivity(intent)
             }else{}
         }

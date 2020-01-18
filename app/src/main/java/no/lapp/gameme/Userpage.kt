@@ -3,7 +3,7 @@ package no.lapp.gameme
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class Main2Activity : AppCompatActivity() {
+class Userpage : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
