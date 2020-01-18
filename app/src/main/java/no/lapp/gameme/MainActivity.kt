@@ -1,5 +1,6 @@
 package no.lapp.gameme
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -15,11 +16,18 @@ class MainActivity : AppCompatActivity() {
         var passwordinp= findViewById<TextView>(R.id.passwordinp)
         val loginbtn= findViewById<Button>(R.id.loginbtn)
 
-        loginbtn.setOnClickListener{}
 
 
 
+
+        loginbtn.setOnClickListener{
+            val intent = Intent(this,Main2Activity::class.java)
+            startActivity(intent)
+
+        }
 
 
     }
+
+
 }
