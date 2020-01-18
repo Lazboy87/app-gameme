@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Gameme</string>
+    <string name="Logintxt">Login</string>
+    <string name="Passwordtxt">Your Password</string>
+    <string name="Logmailtxt">Your Email</string>
+    <string name="copyright">2020 Gameme All Rights Reserved</string>
+    <string name="passwordind">Password:</string>
+    <string name="userind">User:</string>
+    <string name="Loginbtn">Login</string>
+
+</resources>
