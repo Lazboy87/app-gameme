@@ -10,7 +10,7 @@ class Login : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.login)
 
         var userinp = findViewById<TextView>(R.id.usernameinp)
         var passwordinp= findViewById<TextView>(R.id.passwordinp)
