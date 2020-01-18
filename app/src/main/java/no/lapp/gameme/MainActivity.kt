@@ -21,9 +21,15 @@ class MainActivity : AppCompatActivity() {
 
 
         loginbtn.setOnClickListener{
-            val intent = Intent(this,Main2Activity::class.java)
-            startActivity(intent)
+            var username = userinp.editableText.toString()
+            var password = passwordinp.editableText.toString()
+            println(username)
+            println(password)
 
+            if(username  == "lasse@lasse.com" && password == "lasse87") {
+                val intent = Intent(this, Main2Activity::class.java)
+                startActivity(intent)
+            }else{}
         }
 
 
