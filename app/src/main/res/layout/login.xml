@@ -77,8 +77,8 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="227dp"
-        android:layout_height="36dp"
+        android:layout_width="244dp"
+        android:layout_height="41dp"
         android:text="@string/copyright"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
