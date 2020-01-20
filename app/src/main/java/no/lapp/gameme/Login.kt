@@ -15,8 +15,14 @@ class Login : AppCompatActivity() {
         var userinp = findViewById<TextView>(R.id.usernameinp)
         var passwordinp= findViewById<TextView>(R.id.passwordinp)
         val loginbtn= findViewById<Button>(R.id.loginbtn)
+        val registerUserbtn = findViewById<Button>(R.id.Registerbtn)
 
 
+        registerUserbtn.setOnClickListener{
+            val intent = Intent(this,registerUser::class.java)
+                startActivity(intent)
+
+        }
 
 
 

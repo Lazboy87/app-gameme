@@ -4,6 +4,10 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="lightbluetheme">#c1e1ec</color>
+    <color name="lightskyblue">#87CEFA</color>
+    <color name="darktorquise">#00CED1</color>
+
+
 
 
 </resources>

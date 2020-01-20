@@ -7,5 +7,16 @@
     <string name="passwordind">Password:</string>
     <string name="userind">User:</string>
     <string name="Loginbtn">Login</string>
+    <string name="registerbtn">Register</string>
+
+    <string name="registerheader">User Register</string>
+    <string name="registerFirstname">First name</string>
+    <string name="registerLastname">Last name</string>
+    <string name="registerNick">Nickname</string>
+    <string name="registerMail">Email</string>
+    <string name="registerDateOB">Date of birth:</string>
+
+
+
 
 </resources>
