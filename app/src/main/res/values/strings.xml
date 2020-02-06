@@ -16,6 +16,9 @@
     <string name="registerMail">Email</string>
     <string name="registerDateOB">Date of birth:</string>
 
+    <string name="registerPass">Your Password</string>
+    <string name="registerButton">Register</string>
+
 
 
 
