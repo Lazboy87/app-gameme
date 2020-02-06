@@ -5,16 +5,18 @@ import android.provider.ContactsContract
 class User{
     var id : Int = 0
     var name : String = ""
-    var nicknname : String = ""
+    var nickname : String = ""
     var email : String = ""
-    var dateOfBirth : Int = 0
+    var password : String = ""
+    //var dateOfBirth : Int = 0
 
 
-    constructor(name:String , nickname: String,email : String, dateOfBirth : Int ){
+    constructor(name:String , nickname: String,email : String,password : String){
         this.name = name
-        this.nicknname = nicknname
+        this.nickname = nickname
         this.email = email
-        this.dateOfBirth = dateOfBirth
+        this.password = password
+       // this.dateOfBirth = dateOfBirth
 
 
 
