@@ -3,15 +3,20 @@ package no.lapp.gameme
 
 
 class User{
-    var id : Int = 0
+    var id : String? = ""
     var name : String = ""
     var nickname : String = ""
     var email : String = ""
     var password : String = ""
-    var age : Int = 0
+    var age : String = ""
 
 
-    constructor(name:String , nickname: String,email : String,password : String,  age:Int ){
+    constructor(
+        id: String?, name:String, nickname: String,
+        email: String,
+        password: String, age: String
+    ){
+        this.id = id
         this.name = name
         this.nickname = nickname
         this.email = email

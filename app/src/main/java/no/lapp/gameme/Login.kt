@@ -27,8 +27,8 @@ class Login : AppCompatActivity() {
 
 
         loginbtn.setOnClickListener{
-            var username = userinp.editableText.toString()
-            var password = passwordinp.editableText.toString()
+            var username = userinp.editableText.toString().toUpperCase()
+            var password = passwordinp.editableText.toString().toUpperCase()
 
             if(username  == "lasse@lasse.com" && password == "lasse87") {
                 val intent = Intent(this, Userpage::class.java)
