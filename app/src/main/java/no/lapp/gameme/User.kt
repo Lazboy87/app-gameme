@@ -1,6 +1,6 @@
 package no.lapp.gameme
 
-import android.provider.ContactsContract
+
 
 class User{
     var id : Int = 0
@@ -8,15 +8,15 @@ class User{
     var nickname : String = ""
     var email : String = ""
     var password : String = ""
-    //var dateOfBirth : Int = 0
+    var age : Int = 0
 
 
-    constructor(name:String , nickname: String,email : String,password : String){
+    constructor(name:String , nickname: String,email : String,password : String,  age:Int ){
         this.name = name
         this.nickname = nickname
         this.email = email
         this.password = password
-       // this.dateOfBirth = dateOfBirth
+        this.age = age
 
 
 
