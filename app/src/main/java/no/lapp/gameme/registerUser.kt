@@ -73,7 +73,7 @@ class registerUser : AppCompatActivity() {
 
 
 
-            ref.child(userId).setValue(user).addOnCompleteListener { Toast.makeText(applicationContext,"USER SAVED SUCCESS TAKING YOU TO LOGIN", Toast.LENGTH_LONG).show() }
+            ref.child(userId).setValue(user).addOnCompleteListener { Toast.makeText(applicationContext,"USER REGISTER SUCCESS! TAKING YOU TO LOGIN", Toast.LENGTH_LONG).show() }
 
             Handler().postDelayed({
                 val intent = Intent(this,Login::class.java)
