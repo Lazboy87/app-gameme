@@ -1,7 +1,9 @@
 package no.lapp.gameme
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -63,12 +65,22 @@ class registerUser : AppCompatActivity() {
 
         val ref = FirebaseDatabase.getInstance().getReference("Users")
 
-        val  userId = ref.push().key
+        val  userId  = ref.push().key
 
         val user = User(userId,firstname+" "+lastname,nickname,Email,Pass,Age)
 
         if (userId != null) {
-            ref.child(userId).setValue(user).addOnCompleteListener { Toast.makeText(applicationContext,"USER SAVED SUCCESS", Toast.LENGTH_LONG).show() }
+
+
+
+            ref.child(userId).setValue(user).addOnCompleteListener { Toast.makeText(applicationContext,"USER SAVED SUCCESS TAKING YOU TO LOGIN", Toast.LENGTH_LONG).show() }
+
+            Handler().postDelayed({
+                val intent = Intent(this,Login::class.java)
+                startActivity(intent)
+            }, 4000)
+
+
         } else {
 
 
@@ -82,6 +94,10 @@ class registerUser : AppCompatActivity() {
                     ).show()
                 }
             }
+
+
+
+
 
 
         }

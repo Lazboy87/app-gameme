@@ -2,6 +2,7 @@ package no.lapp.gameme
 
 
 
+
 class User{
     var id : String? = ""
     var name : String = ""
@@ -9,6 +10,8 @@ class User{
     var email : String = ""
     var password : String = ""
     var age : String = ""
+
+
 
 
     constructor(

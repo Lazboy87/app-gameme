@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 
+
 class Login : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +27,12 @@ class Login : AppCompatActivity() {
 
 
 
+
         loginbtn.setOnClickListener{
+
+
+
+
             var username = userinp.editableText.toString().toUpperCase()
             var password = passwordinp.editableText.toString().toUpperCase()
 
