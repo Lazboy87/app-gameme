@@ -7,10 +7,17 @@ import android.os.Handler
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
 
 class registerUser : AppCompatActivity() {
+
+
+
+    private lateinit var auth: FirebaseAuth
+
+
 
     lateinit var Fname:EditText
     lateinit var Lname:EditText
@@ -32,6 +39,10 @@ class registerUser : AppCompatActivity() {
         password = findViewById(R.id.PasswordReg)
         regbutton = findViewById(R.id.regbutton)
 
+
+
+
+
        regbutton.setOnClickListener(){saveUser()}
 
 
@@ -40,11 +51,13 @@ class registerUser : AppCompatActivity() {
         }
 
     private fun saveUser() {
+
+        auth = FirebaseAuth.getInstance()
         val firstname= Fname.text.toString().toUpperCase().trim()
         val lastname= Lname.text.toString().toUpperCase().trim()
         val nickname= Nname.text.toString().toUpperCase().trim()
-        val Email= email.text.toString().toUpperCase().trim()
-        val Pass= password.text.toString().toUpperCase().trim()
+        val Email= email.text.toString().trim()
+        val Pass= password.text.toString().trim()
         val Age = age.text.toString().toUpperCase().trim()
 
 
@@ -67,17 +80,27 @@ class registerUser : AppCompatActivity() {
 
         val  userId  = ref.push().key
 
-        val user = User(userId,firstname+" "+lastname,nickname,Email,Pass,Age)
+        val user = User(userId,firstname+" "+lastname,nickname,Email,Age)
 
         if (userId != null) {
 
-
+            auth.createUserWithEmailAndPassword(Email,Pass)
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        Toast.makeText(applicationContext,"Email and password registered sucess", Toast.LENGTH_LONG).show()
+                    } else {
+                        Toast.makeText(baseContext, "Sign Up failed. Try again after some time.",
+                            Toast.LENGTH_SHORT).show()
+                    }
+                }
 
             ref.child(userId).setValue(user).addOnCompleteListener { Toast.makeText(applicationContext,"USER REGISTER SUCCESS! TAKING YOU TO LOGIN", Toast.LENGTH_LONG).show() }
+
 
             Handler().postDelayed({
                 val intent = Intent(this,Login::class.java)
                 startActivity(intent)
+                finish()
             }, 4000)
 
 

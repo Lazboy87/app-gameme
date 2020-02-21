@@ -17,7 +17,7 @@ class User{
     constructor(
         id: String?, name:String, nickname: String,
         email: String,
-        password: String, age: String
+         age: String
     ){
         this.id = id
         this.name = name
