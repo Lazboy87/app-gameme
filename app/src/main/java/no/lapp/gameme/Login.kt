@@ -23,7 +23,7 @@ class Login : AppCompatActivity() {
 
          lateinit var auth: FirebaseAuth
 
-        auth = FirebaseAuth.getInstance()
+        val TAG = "ClassName"
 
         var userinp = findViewById<TextView>(R.id.usernameinp)
         var passwordinp= findViewById<TextView>(R.id.passwordinp)
@@ -54,16 +54,19 @@ class Login : AppCompatActivity() {
 
         loginbtn.setOnClickListener{
 
-            var email = userinp.toString()
-            var pass = passwordinp.toString()
+
+
+            var email = userinp.getText().toString().trim()
+            var pass = passwordinp.getText().toString().trim()
 
             auth = FirebaseAuth.getInstance()
+
 
             auth.signInWithEmailAndPassword(email,pass)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
                         // Sign in success, update UI with the signed-in user's information
-                       // Log.d(TAG, "signInWithEmail:success")
+                        Log.d(TAG, "signInWithEmail:success")
                         Toast.makeText(baseContext, "Authentication sucsess.",
                             Toast.LENGTH_SHORT).show()
                         val user = auth.currentUser
@@ -72,7 +75,7 @@ class Login : AppCompatActivity() {
 
                     } else {
                         // If sign in fails, display a message to the user.
-                       // Log.w(TAG, "signInWithEmail:failure", task.exception)
+                       Log.w(TAG, "signInWithEmail:failure", task.exception)
                         Toast.makeText(baseContext, "Authentication failed.",
                             Toast.LENGTH_SHORT).show()
 

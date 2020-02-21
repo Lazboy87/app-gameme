@@ -8,7 +8,7 @@ class User{
     var name : String = ""
     var nickname : String = ""
     var email : String = ""
-    var password : String = ""
+
     var age : String = ""
 
 
@@ -23,7 +23,7 @@ class User{
         this.name = name
         this.nickname = nickname
         this.email = email
-        this.password = password
+
         this.age = age
 
 
