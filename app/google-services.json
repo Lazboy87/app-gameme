@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "683084273578-avs2fv6fi3n6e9hkqgk008mcfgl6rhu9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "no.lapp.gameme",
+            "certificate_hash": "c9a7d8dd7e75bbd8a0e248e245498d18be346938"
+          }
+        },
+        {
           "client_id": "683084273578-p57qebne8qpi69la5a6at2fgk9s94tut.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
