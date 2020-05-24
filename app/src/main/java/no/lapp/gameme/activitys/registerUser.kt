@@ -21,8 +21,6 @@ class registerUser : AppCompatActivity() {
 
 
 
-    lateinit var Fname:EditText
-    lateinit var Lname:EditText
     lateinit var Nname:EditText
     lateinit var email:EditText
     lateinit var age:EditText
@@ -33,8 +31,7 @@ class registerUser : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register_user)
 
-        Fname = findViewById(R.id.firstname)
-        Lname = findViewById(R.id.lastname)
+
         Nname = findViewById(R.id.nickname)
         email = findViewById(R.id.Email)
         age = findViewById(R.id.age)
@@ -55,8 +52,7 @@ class registerUser : AppCompatActivity() {
     private fun saveUser() {
 
         auth = FirebaseAuth.getInstance()
-        val firstname= Fname.text.toString().toUpperCase().trim()
-        val lastname= Lname.text.toString().toUpperCase().trim()
+
         val nickname= Nname.text.toString().toUpperCase().trim()
         val Email= email.text.toString().trim()
         val Pass= password.text.toString().trim()

@@ -17,9 +17,6 @@ class Userpage : AppCompatActivity() {
         val TAG = "ClassName"
 
 
-        var emailshow = findViewById<TextView>(R.id.userEmail)
-        var nameshow = findViewById<TextView>(R.id.userName)
-        var ageshow = findViewById<TextView>(R.id.userAge)
         var nickshow = findViewById<TextView>(R.id.userNick)
 
 
@@ -38,14 +35,11 @@ class Userpage : AppCompatActivity() {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
                     for (postSnapshot in dataSnapshot.children) {
                         var values = postSnapshot
-                        var name = values.child("name").value.toString().trim()
-                        var age = values.child("age").value.toString().trim()
+
                         var nickname = values.child("nickname").value.toString().trim()
 
-                        nameshow.setText("Name:  "+name )
-                        emailshow.setText("Email  :"+email)
-                        ageshow.setText("Age  :"+age)
-                        nickshow.setText("Nickname:  "+nickname)
+
+                        nickshow.setText(nickname)
 
                     }
                 }
