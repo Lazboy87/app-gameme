@@ -1,4 +1,4 @@
-package no.lapp.gameme
+package no.lapp.gameme.activitys
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +9,8 @@ import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
+import no.lapp.gameme.R
+import no.lapp.gameme.user.User
 
 
 class registerUser : AppCompatActivity() {
@@ -62,10 +64,7 @@ class registerUser : AppCompatActivity() {
 
 
 
-        if(firstname.isEmpty()){ Fname.error = "please enter first name"
-            return }
-        if(lastname.isEmpty()){ Lname.error = "please enter last name"
-            return }
+
         if(nickname.isEmpty()){ Nname.error = "please enter nick name"
             return }
         if(Email.isEmpty()){ email.error = "please enter email"
@@ -80,7 +79,12 @@ class registerUser : AppCompatActivity() {
 
         val  userId  = ref.push().key
 
-        val user = User(userId,firstname+" "+lastname,nickname,Email,Age)
+        val user = User(
+            userId,
+            nickname,
+            Email,
+            Age
+        )
 
         if (userId != null) {
 
@@ -98,7 +102,7 @@ class registerUser : AppCompatActivity() {
 
 
             Handler().postDelayed({
-                val intent = Intent(this,Login::class.java)
+                val intent = Intent(this, Login::class.java)
                 startActivity(intent)
                 finish()
             }, 4000)

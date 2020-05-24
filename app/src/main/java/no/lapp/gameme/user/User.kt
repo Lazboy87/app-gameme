@@ -1,11 +1,10 @@
-package no.lapp.gameme
+package no.lapp.gameme.user
 
 
 
 
 class User{
     var id : String? = ""
-    var name : String = ""
     var nickname : String = ""
     var email : String = ""
 
@@ -15,12 +14,12 @@ class User{
 
 
     constructor(
-        id: String?, name:String, nickname: String,
+        id: String?,  nickname: String,
         email: String,
          age: String
     ){
         this.id = id
-        this.name = name
+
         this.nickname = nickname
         this.email = email
 

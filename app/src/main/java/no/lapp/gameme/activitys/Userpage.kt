@@ -1,12 +1,12 @@
-package no.lapp.gameme
+package no.lapp.gameme.activitys
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
-import androidx.constraintlayout.solver.widgets.Snapshot
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import no.lapp.gameme.R
 
 class Userpage : AppCompatActivity() {
 

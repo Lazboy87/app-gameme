@@ -1,4 +1,4 @@
-package no.lapp.gameme
+package no.lapp.gameme.activitys
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,7 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-
+import no.lapp.gameme.R
 
 
 class Login : AppCompatActivity() {
@@ -32,7 +32,7 @@ class Login : AppCompatActivity() {
 
 
         registerUserbtn.setOnClickListener{
-            val intent = Intent(this,registerUser::class.java)
+            val intent = Intent(this, registerUser::class.java)
                 startActivity(intent)
             finish()
 

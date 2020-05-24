@@ -6,12 +6,12 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
 
-    tools:context=".Login">
+    tools:context=".activitys.Login">
 
 
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageLogo"
         android:layout_width="407dp"
         android:layout_height="258dp"
         app:layout_constraintBottom_toBottomOf="parent"
