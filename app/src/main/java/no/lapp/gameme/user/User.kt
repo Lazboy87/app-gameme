@@ -7,7 +7,7 @@ class User{
     var id : String? = ""
     var nickname : String = ""
     var email : String = ""
-
+    var country:String=""
     var age : String = ""
 
 
@@ -16,12 +16,14 @@ class User{
     constructor(
         id: String?,  nickname: String,
         email: String,
+        country:String,
          age: String
     ){
         this.id = id
 
         this.nickname = nickname
         this.email = email
+        this.country = country
 
         this.age = age
 

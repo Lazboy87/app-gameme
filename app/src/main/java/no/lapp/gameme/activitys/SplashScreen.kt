@@ -12,20 +12,20 @@ import no.lapp.gameme.R
 class SplashScreen : AppCompatActivity() {
 
     private lateinit var image: ImageView
-    private lateinit var textR: TextView
-    private lateinit var textL: TextView
+
+    private lateinit var textBottom: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
 
         image= findViewById(R.id.imageLogo)
-        textL= findViewById(R.id.LogotextL)
-        textR= findViewById(R.id.LogotextR)
+        textBottom= findViewById(R.id.LogotextL)
+
 
         animateImage()
         animateTextL()
-        animateTextR()
+
 
 
         Handler().postDelayed({
@@ -46,23 +46,15 @@ class SplashScreen : AppCompatActivity() {
 
     }
     private fun animateTextL() {
-        val left = AnimationUtils.loadAnimation(this,
-            R.anim.left
+        val bottom = AnimationUtils.loadAnimation(this,
+            R.anim.bottom
         )
 
-        textL.animation = left
+        textBottom.animation = bottom
 
 
     }
 
-    private fun animateTextR() {
-        val right = AnimationUtils.loadAnimation(this,
-            R.anim.right
-        )
 
-        textR.animation = right
-
-
-    }
 
 }

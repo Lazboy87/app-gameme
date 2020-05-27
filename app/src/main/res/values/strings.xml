@@ -18,6 +18,7 @@
 
     <string name="registerPass">Your Password</string>
     <string name="registerButton">Register</string>
+    <string name="registerCountry">Your Country</string>
 
 
 </resources>
