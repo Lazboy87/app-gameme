@@ -44,13 +44,13 @@ class registerUser : AppCompatActivity() {
         "Benin",
         "Bermuda",
         "Bhutan",
-        "Bolivia (Plurinational State of)",
+        "Bolivia)",
         "Bonaire, Sint Eustatius and Saba",
         "Bosnia and Herzegovina",
         "Botswana",
         "Bouvet Island",
         "Brazil",
-        "British Indian Ocean Territory (the)",
+        "British Indian Ocean Territory",
         "Brunei Darussalam",
         "Bulgaria",
         "Burkina Faso",
@@ -59,8 +59,8 @@ class registerUser : AppCompatActivity() {
         "Cambodia",
         "Cameroon",
         "Canada",
-        "Cayman Islands (the)",
-        "Central African Republic (the)",
+        "Cayman Islands",
+        "Central African Republic ",
         "Chad",
         "Chile",
         "China",
@@ -311,13 +311,13 @@ class registerUser : AppCompatActivity() {
         val Pass= password.text.toString().trim()
         val Age = age.text.toString().toUpperCase().trim()
 
-        for (country in countrys){
-            println(country)
-           if(countryname.toUpperCase() != country.toUpperCase()){
-               println(countryname.toUpperCase() + country.toUpperCase())
-               countryName.error = "please enter a real Country"
-              return
-            }
+
+        val countryCases = countrys.map { it.toUpperCase() }
+
+        if(!countryCases.contains(countryname.toUpperCase())){
+
+            countryName.error = "please enter a real Country"
+            return
         }
 
         if(countryname.isEmpty()){ countryName.error = "please enter a Country"
